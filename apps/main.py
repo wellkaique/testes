@@ -6,11 +6,20 @@ import sys
 
 def menu():
     print("###### Validadores #######")
-    option = int(input("1 - Identificador\n2 - Email \n3 - Password \n4 - Idade para trabalho \n5 - Encerrar o "
-                       "programa\n"))
+    print("""
+        1 - Identificador
+        2 - Email
+        3 - Password
+        4 - Idade para trabalho
+        5 - Encerrar o programa
+        """)
+
+def app():
     while True:
+        menu()
+        option = int(input('Informe sua opção: '))
         if option == 0:
-            menu()
+            continue
         elif option == 1:
             view_identifier()
         elif option == 2:
@@ -30,26 +39,22 @@ def menu():
 def view_identifier():
     identified = input("Entre com um identificador: ")
     validators.check_valid_identifier(identified)
-    menu()
 
 
 def view_email():
     email = input("Entre com um email: ")
     validators.check_email(email)
-    menu()
 
 
 def view_password():
     password = input("Entre com um password: ")
     validators.check_password(password)
-    menu()
 
 
 def view_age_to_work():
     age = int(input("Entre com uma idade: "))
     validators.check_age_for_work(age)
-    menu()
 
 
 if __name__ == "__main__":
-    menu()
+    app()
