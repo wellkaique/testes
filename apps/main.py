@@ -1,6 +1,6 @@
 # Program to check input
 # type in Python
-import validators
+from apps.validators import Validators
 import sys
 
 
@@ -13,6 +13,7 @@ def menu():
         4 - Idade para trabalho
         5 - Encerrar o programa
         """)
+
 
 def app():
     while True:
@@ -30,7 +31,6 @@ def app():
             view_age_to_work()
         elif option == 5:
             break
-            #sys.exit()
         else:
             print("Opção inválida. Tente novamente com: ")
             menu()
@@ -57,4 +57,5 @@ def view_age_to_work():
 
 
 if __name__ == "__main__":
+    validators = Validators()
     app()
