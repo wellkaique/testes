@@ -43,11 +43,12 @@ class Validators:
         # pass the regular expression
         # and the string into the fullmatch() method
 
-        if (re.fullmatch(regex, email)):
+        if re.fullmatch(regex, email):
             print("Email Válido")
-
+            return True
         else:
             print("Email Inválido")
+            return False
 
     def check_keywords_python(self, keys):
         """
@@ -63,9 +64,9 @@ class Validators:
         for i in range(len(keys)):
             # checking which are keywords
             if keyword.iskeyword(keys[i]):
-                print(keys[i] + " é uma keyword python")
+                return True
             else:
-                print(keys[i] + " não é uma keyword python")
+                return False
 
     def check_password(self, password):
         """
@@ -182,3 +183,6 @@ class Validators:
 
     def idade_caboco(self, dt, dt2, analfa):
         return None
+
+    if __name__ == '__main__':
+        print(keyword.iskeyword('else'))
