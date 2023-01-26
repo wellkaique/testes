@@ -23,6 +23,9 @@
 #### Executar o teste com o coverage
 `coverage run -m unittest discover` 
 
+### Rodar cobertura de teste em app (runtime)
+`python -m coverage run apps/main.py`
+
 #### Gerar report no terminal
 `coverage report -m`
 
