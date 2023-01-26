@@ -184,5 +184,16 @@ class Validators:
     def idade_caboco(self, dt, dt2, analfa):
         return None
 
+    def isPalindrome(s):
+        """
+          Função que inverte a palavra de entrada e
+          verifica se o reverso e o original são iguais ou não.
+          :param s: String
+          :return: True ou False
+        """
+        return s == s[::-1]
+
+
     if __name__ == '__main__':
         print(keyword.iskeyword('else'))
+        #print(isPalindrome("ava"))
