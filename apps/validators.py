@@ -146,7 +146,7 @@ class Validators:
             result = status.get(0)
             print(result)
 
-            return result
+        return result
 
     def years_in_election(self, birth_date, election_date=None):
         if election_date is None:
